@@ -24,12 +24,12 @@ class SearchForm extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
+        this.props.onSubmit(this.state.city);
     }
 
     render() {
-        var city = this.state.city;
         return (
-            <form action="/forecast">
+            <form onSubmit={this.handleSubmit}>
                 <input onChange={this.handleChange} />
                 <button type="submit">
                     Search
