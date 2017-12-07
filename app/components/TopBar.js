@@ -13,7 +13,7 @@ class TopBar extends React.Component {
     }
 
     handleSearchSubmit(val) {
-        alert(val);
+        this.props.onSubmit(val);
     }
 
     render() {
